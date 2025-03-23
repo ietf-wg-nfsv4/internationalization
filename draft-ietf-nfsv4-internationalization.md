@@ -782,7 +782,7 @@ This is because the server has no
 knowledge of the specific character encoding being used.
 
 
-# The Attribute Fs_charset_cap {#CHARSET}
+# The Attribute fs_charset_cap {#CHARSET}
 
 This OPTIONAL attribute, appears to have been
 added to NFSv4.1 to allow servers, while staying within the
@@ -809,7 +809,7 @@ account the behavior of existing implementations of {{RFC5661}}
 {{RFC8881}} while providing best effort compatibility with the
 definition in {{RFC5661}} and {{RFC8881}}.
 
-## The Attribute Fs_charset_cap Going Forward {#CHARSET-updated}
+## The Attribute fs_charset_cap Going Forward {#CHARSET-updated}
 
 ~~~~
    const FSCHARSET_CAP4_CONTAINS_NON_UTF8  = 0x1;
@@ -1263,7 +1263,7 @@ RFC8881 {{RFC8881}} for further discussion. See {{RFC6943}} for related
 identifier comparison security considerations.  File
 component names are identifiers with respect to the identifier
 comparison discussion in {{RFC6943}} because they are
-sed to identify the objects to which ACLs are applied (See the
+used to identify the objects to which ACLs are applied (See the
 respective Sections 6 of RFC7530 {{RFC7530}} and
 RFC8881 {{RFC8881}}).
 
@@ -1329,7 +1329,7 @@ in which a set of equivalent strings has more than two elements.
    While the variant for title case would not appear in names in
    case-insensitive non-case-preserving file systems, case-insensitive
    string comparison has no problem in treating these three
-   characters as within same se of equivalent characters.
+   characters as within same set of equivalent characters.
 
     This set of
     equivalent strings can be derived using only C-type mappings.
@@ -2806,7 +2806,7 @@ be summarized in the following statements:
   that clients would face, relying on the assumption that each file is
   accessible only by its name.
   As this assumption is no longer true when internationalized name
-  handling is in effect, the appropriate handling is discusssed
+  handling is in effect, the appropriate handling is discussed
   below. {{EQUIV-clcache}} explains the options for handling in the case
   in which the client has very limited information about the details
   about the server's internationalization-related handling of file
@@ -2900,7 +2900,7 @@ and could be adopted without disrupting existing clients and servers.
 Appendices {{<INFO-casei}} and {{<INFO-norm}} discuss the possible forms
 of such attributes.
 
-# Acknowledgements
+# Acknowledgments
 {: numbered="false"}
 
 This document is based, in large part, on {{Section 12 of RFC7530}} and
