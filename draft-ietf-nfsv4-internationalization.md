@@ -217,7 +217,7 @@ have limited implementation experience:
   with desirable mappings depending on user preference and the use
   of different languages, the definition of appropriate mappings
   cannot be done within this specification, although the issues that
-  need to be dealt with are discussed in {{EQUIV-case}} 
+  need to be dealt with are discussed in {{EQUIV-case}}
 
 
 # Terminology {#TERM}
@@ -1825,7 +1825,7 @@ of canonical equivalence and case-based equivalence.   While this can
 be addressed by normalizing strings before doing case-insensitive
 comparison, it is more efficient to do a general form-insensitive
 and case-insensitive string comparison in a single step as described
-in {{IMPL-formi}} 
+in {{IMPL-formi}}.
 
 The following tables would be used by the comparison algorithm
 presented below.
