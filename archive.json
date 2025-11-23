@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-20T01:17:48.962665+00:00",
+  "timestamp": "2025-11-23T01:37:52.277623+00:00",
   "repo": "ietf-wg-nfsv4/internationalization",
   "labels": [
     {
@@ -49,6 +49,103 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOONb28c7ZfySy",
+      "title": "Example wanted for equivalenace mapping",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/1",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In the paragraph / bullet point of the following:\n\n```\nName strings may be mapped to equivalent names resulting in a\n  file having an equivalent name rather than the one specified by\n  the client.  This approach is implementable within the server\n  proper.\n```\n\n\nI think an example added to that paragraph would be really helpful.\n\n",
+      "createdAt": "2025-11-20T20:35:14Z",
+      "updatedAt": "2025-11-20T20:35:14Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOONb28c7Zf5N7",
+      "title": "Expand UNICODE normalization acronyms",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/2",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The draft just starts mentioning ```NFC``` and ```NFD``` without really explaining them; spell out the words before first acronym use and I think some really simple comments about what NFC and NFD are would be helpful.  First use is the following:\n\n```\nGenerally, when such pairs exist, the form in which the diacritic is\n  integrated into the symbol is designated the NFC form while the other is\n  the NFD form.\n```\n\nand may be some text such as:\n\n```\nUnicode Normalization Form C (NFC) is typically described as the canonical decomposition of a character.  Unicode Normalization Form D (NFD) is typically described as the canonical decomposition followed by the canonical composition.  Precomposed characters, single Unicode entries such as (U+00C5) Latin Capital Letter A With Ring Above is precomposed and NFC whereas (U+0041) Latin Capital Letter A + (U+030A) Combining Ring Above are NFD.\n```\n\n\n",
+      "createdAt": "2025-11-20T20:45:37Z",
+      "updatedAt": "2025-11-20T20:45:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOONb28c7Zf8F1",
+      "title": "\"will\" to \"MUST\" in section Handling of Case-insensitive Equivalence of Strings",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/3",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I think in the following paragraph should the \"will\" be a \"MUST\":\n\n```\nWhen the OPTIONAL attributes case_insensitive\n  and case_preserving are implemented, their values will both\n  be false.\n```\n\n",
+      "createdAt": "2025-11-20T20:49:32Z",
+      "updatedAt": "2025-11-20T20:49:32Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOONb28c7Zf9MZ",
+      "title": "#2 \"will\" to \"MUST\" in Handling of Case-insensitive Equivalence of Strings",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/4",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "same thing of \"will\" to \"MUST\" 2 paragraphs down in the following:\n\n```\nWhen the OPTIONAL attributes case_insensitive\n  and case_preserving are implemented, their values will be true\n  and false, respectively.\n```\n\n\n\n",
+      "createdAt": "2025-11-20T20:51:04Z",
+      "updatedAt": "2025-11-20T20:51:04Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOONb28c7ZgARU",
+      "title": "string equivalence and privilege escalation",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/5",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In the following snippet, is there a plausible path to privilege escalation:\n\n```\nFor similar reasons, where non-UTF-8 encoded names are\n  accepted, case-related mappings cannot be relied upon.  For\n  this reason, the attribute case_insensitive MUST NOT be\n  returned as TRUE for file systems which accept non-UTF-8 encoded\n  file names.\n\n  The kinds of modification and aliasing mentioned here can lead to both\n  false negatives and false positives, depending on the strings in question,\n  which can result in security issues such as elevation of privilege and\n  denial of service (see {{RFC6943}} for further discussion).\n```\n\nAssuming there is strong authentication in place so that we know the identity of the user on the client, shouldn't accessing a sensitive path/file object get denied even if there is some type of crafted string equivalence?\n\n",
+      "createdAt": "2025-11-20T20:55:10Z",
+      "updatedAt": "2025-11-20T20:55:10Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOONb28c7ZgY-_",
+      "title": "updated rfc5661bis to rfc8881bis",
+      "url": "https://github.com/ietf-wg-nfsv4/internationalization/issues/6",
+      "state": "OPEN",
+      "author": "nacho319",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In this paragraph, change from 5661bis to 8881bis:\n\n```\nNote that the references to per-minor-version documents may become out-of-date as part of the rfc5661bis effort. In the event that happens, it will be necessary for users to consult RFCs derived from\n```\n\n",
+      "createdAt": "2025-11-20T21:24:33Z",
+      "updatedAt": "2025-11-20T21:24:33Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
